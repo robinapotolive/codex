@@ -1,0 +1,372 @@
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+.auth-shell {
+  display: grid;
+  grid-template-columns: minmax(340px, 0.9fr) minmax(460px, 1.1fr);
+  min-height: 100vh;
+}
+
+.intro-panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: clamp(2rem, 5vw, 4.5rem);
+  color: #fff;
+  background:
+    radial-gradient(ellipse at 12% 93%, rgb(250 174 114 / 22%), transparent 36%),
+    linear-gradient(145deg, #29203f 0%, #382a58 58%, #51406e 100%);
+}
+
+.wordmark,
+.mobile-wordmark {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: fit-content;
+  color: inherit;
+  font-size: 1.05rem;
+  font-weight: 750;
+  letter-spacing: -0.035em;
+  text-decoration: none;
+}
+
+.wordmark-light {
+  color: #bfb4d2;
+  font-weight: 450;
+}
+
+.wordmark-icon {
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  border: 1px solid rgb(255 255 255 / 28%);
+  border-radius: 0.65rem;
+  background: rgb(255 255 255 / 10%);
+  color: #f5bb8f;
+  font-family: Georgia, serif;
+  font-size: 1.45rem;
+  font-style: italic;
+  line-height: 1;
+}
+
+.intro-copy,
+.demo-note {
+  position: relative;
+  z-index: 1;
+}
+
+.intro-copy {
+  max-width: 32rem;
+  margin-block: 4rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.9rem;
+  color: #b7a9cf;
+  font-size: 0.72rem;
+  font-weight: 750;
+  letter-spacing: 0.14em;
+}
+
+.intro-copy h2 {
+  margin: 0;
+  font-size: clamp(3rem, 5vw, 5.2rem);
+  font-weight: 620;
+  letter-spacing: -0.075em;
+  line-height: 0.99;
+}
+
+.intro-copy h2 span {
+  color: #efb58a;
+}
+
+.intro-description {
+  max-width: 24rem;
+  margin: 1.5rem 0 0;
+  color: #d3ccdf;
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+.demo-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  max-width: 23rem;
+  color: #e0d9e8;
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+.demo-note p {
+  margin: 0;
+}
+
+.note-icon {
+  display: grid;
+  flex: 0 0 1.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  place-items: center;
+  border: 1px solid #a99abb;
+  border-radius: 50%;
+  color: #d9cce9;
+  font-family: Georgia, serif;
+  font-size: 0.78rem;
+  font-style: italic;
+}
+
+.panel-orbit {
+  position: absolute;
+  right: -14rem;
+  bottom: -19rem;
+  width: 42rem;
+  aspect-ratio: 1;
+  border: 1px solid rgb(255 255 255 / 9%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.orbit-two {
+  right: -8rem;
+  bottom: -13rem;
+  width: 30rem;
+  border-color: rgb(255 255 255 / 7%);
+}
+
+.form-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem clamp(1.5rem, 7vw, 7rem);
+  background: #fbfaf8;
+}
+
+.mobile-wordmark {
+  display: none;
+  margin-bottom: 3rem;
+  color: #30243f;
+}
+
+.mobile-wordmark .wordmark-icon {
+  border-color: #e2dce8;
+  background: #f3eff6;
+  color: #745a91;
+}
+
+.mobile-wordmark .wordmark-light {
+  color: #82798c;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 28rem;
+}
+
+.card-heading {
+  margin-bottom: 2rem;
+}
+
+.card-heading .eyebrow {
+  color: #8d709f;
+}
+
+.card-heading h1 {
+  margin: 0;
+  color: #292331;
+  font-size: clamp(2rem, 3vw, 2.55rem);
+  font-weight: 650;
+  letter-spacing: -0.06em;
+}
+
+.subtitle {
+  margin: 0.65rem 0 0;
+  color: #77727d;
+  font-size: 0.95rem;
+}
+
+.field {
+  margin-bottom: 1.2rem;
+}
+
+.field label,
+.label-row {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #393441;
+  font-size: 0.84rem;
+  font-weight: 650;
+}
+
+.label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.label-row label {
+  margin: 0;
+}
+
+.field-hint {
+  color: #89828f;
+  font-size: 0.72rem;
+  font-weight: 450;
+}
+
+.field input {
+  width: 100%;
+  min-height: 3.15rem;
+  padding: 0.8rem 0.95rem;
+  border: 1px solid #ddd9e0;
+  border-radius: 0.65rem;
+  outline: none;
+  background: #fff;
+  color: #292331;
+  font: inherit;
+  font-size: 0.92rem;
+  transition:
+    border-color 140ms ease,
+    box-shadow 140ms ease;
+}
+
+.field input::placeholder {
+  color: #a9a4ac;
+}
+
+.field input:focus {
+  border-color: #8663a5;
+  box-shadow: 0 0 0 3px rgb(134 99 165 / 14%);
+}
+
+.field input[aria-invalid='true'] {
+  border-color: #cf5e68;
+}
+
+.field-error,
+.form-error {
+  margin: 0.45rem 0 0;
+  color: #b73543;
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.form-error {
+  margin: 0.2rem 0 1rem;
+  padding: 0.75rem 0.85rem;
+  border: 1px solid #f1c8cc;
+  border-radius: 0.6rem;
+  background: #fff5f5;
+}
+
+.success-message {
+  margin: -0.4rem 0 1.25rem;
+  padding: 0.75rem 0.85rem;
+  border: 1px solid #c9e6d4;
+  border-radius: 0.6rem;
+  background: #f1fbf4;
+  color: #286440;
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.primary-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  width: 100%;
+  min-height: 3.2rem;
+  margin-top: 1.6rem;
+  padding: 0.8rem 1rem;
+  border: 0;
+  border-radius: 0.65rem;
+  background: #6f5189;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 650;
+  transition:
+    background 150ms ease,
+    transform 150ms ease;
+}
+
+.primary-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: #5e4278;
+}
+
+.primary-button:focus-visible,
+.auth-switch a:focus-visible,
+.wordmark:focus-visible {
+  outline: 3px solid #bd9cd6;
+  outline-offset: 3px;
+}
+
+.primary-button:disabled {
+  cursor: wait;
+  opacity: 0.72;
+}
+
+.auth-switch {
+  margin: 1.65rem 0 0;
+  color: #77727d;
+  font-size: 0.84rem;
+  text-align: center;
+}
+
+.auth-switch a {
+  margin-left: 0.25rem;
+  color: #674984;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.auth-switch a:hover {
+  text-decoration: underline;
+}
+
+.form-footer {
+  margin: 3rem 0 0;
+  color: #9a949f;
+  font-size: 0.74rem;
+}
+
+.form-footer span {
+  margin-left: 0.2rem;
+  color: #a47db8;
+}
+
+@media (max-width: 800px) {
+  .auth-shell {
+    display: block;
+    min-height: 100vh;
+  }
+
+  .intro-panel {
+    display: none;
+  }
+
+  .form-panel {
+    min-height: 100vh;
+    padding: 2.5rem 1.4rem;
+  }
+
+  .mobile-wordmark {
+    display: inline-flex;
+  }
+
+  .form-footer {
+    margin-top: 2rem;
+  }
+}

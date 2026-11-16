@@ -1,0 +1,67 @@
+<main class="dashboard-shell">
+  <header class="topbar">
+    <a class="wordmark" routerLink="/dashboard" aria-label="Codex Playground dashboard">
+      <span class="wordmark-icon" aria-hidden="true">c</span>
+      <span>codex<span class="wordmark-light">playground</span></span>
+    </a>
+    <div class="account-menu">
+      <span class="account-email">{{ email }}</span>
+      <button class="sign-out-button" type="button" (click)="signOut()">Sign out</button>
+    </div>
+  </header>
+
+  <section class="welcome-card" aria-labelledby="welcome-title">
+    <div class="welcome-copy">
+      <p class="eyebrow">YOUR PLAYGROUND</p>
+      <h1 id="welcome-title">Your workspace is ready.</h1>
+      <p class="welcome-description">
+        You registered, signed in, and made it to a protected page. Nice work.
+      </p>
+      <p class="signed-in-as">
+        Signed in as <strong>{{ email }}</strong>
+      </p>
+    </div>
+    <div class="welcome-art" aria-hidden="true">
+      <span class="art-spark spark-one">✦</span>
+      <span class="art-spark spark-two">✦</span>
+      <span class="art-orbit orbit-outer"></span>
+      <span class="art-orbit orbit-inner"></span>
+      <span class="art-core">c</span>
+    </div>
+  </section>
+
+  <section class="checklist" aria-labelledby="checklist-title">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">QUICK CHECK</p>
+        <h2 id="checklist-title">The basics are working</h2>
+      </div>
+      <span class="complete-pill"><span aria-hidden="true">✓</span> 3 of 3</span>
+    </div>
+
+    <div class="check-grid">
+      <article class="check-card">
+        <span class="check-icon" aria-hidden="true">01</span>
+        <h3>Account created</h3>
+        <p>Your demo account is saved in this browser.</p>
+        <span class="check-status"><span aria-hidden="true">✓</span> Complete</span>
+      </article>
+      <article class="check-card">
+        <span class="check-icon" aria-hidden="true">02</span>
+        <h3>Login verified</h3>
+        <p>Your password was checked before opening this page.</p>
+        <span class="check-status"><span aria-hidden="true">✓</span> Complete</span>
+      </article>
+      <article class="check-card">
+        <span class="check-icon" aria-hidden="true">03</span>
+        <h3>Route protected</h3>
+        <p>Sign out to see the dashboard guard redirect you.</p>
+        <span class="check-status"><span aria-hidden="true">✓</span> Complete</span>
+      </article>
+    </div>
+  </section>
+
+  <p class="demo-disclaimer">
+    This is a local demo, not production authentication. Your account data stays in this browser.
+  </p>
+</main>
