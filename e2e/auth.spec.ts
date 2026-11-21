@@ -15,7 +15,7 @@ test('registers, signs in, and redirects protected pages after sign-out', async 
 
   await page.getByLabel('Email address').fill(email);
   await page.getByLabel('Password', { exact: true }).fill(password);
-  await page.getByRole('button', { name: 'Sign in' }).click();
+  await page.getByRole('button', { name: 'Login' }).click();
 
   await expect(page).toHaveURL(/\/dashboard$/);
   await expect(page.getByRole('heading', { name: 'Your workspace is ready.' })).toBeVisible();
@@ -40,7 +40,7 @@ test('validates registration and rejects incorrect credentials', async ({ page }
   await page.getByRole('link', { name: 'Sign in' }).click();
   await page.getByLabel('Email address').fill('missing@example.test');
   await page.getByLabel('Password', { exact: true }).fill('TestPassword123!');
-  await page.getByRole('button', { name: 'Sign in' }).click();
+  await page.getByRole('button', { name: 'Login' }).click();
 
   await expect(page.getByRole('alert')).toHaveText('Incorrect email or password.');
 });
